@@ -1,6 +1,6 @@
 # DishyPy
 
-Simple Python examples for Starlink dish API
+Simple python examples for Starlink dish API
 
 ## Contents
 
@@ -18,7 +18,7 @@ This project is meant simply as a starting point. There are two ways you might u
 
 2. Install the project as is (`pip install --upgrade -r requirements.txt`) and then try running
    `status.py` to see if you are able to get data from your dish. If so, you are ready to prototype from
-   `dish_get_status.py`. 
+   `dish_get_status.py`.
 
 ## History
 
@@ -31,8 +31,8 @@ Compiling it on a RaspberryPi was a long path and I was hoping to find a solutio
 and easy for others to use.
 
 I found [starlink-grpc-tools](https://github.com/sparky8512/starlink-grpc-tools) had a collection of tools that 
-looked like what I needed. I was hoping it would be able to be installed and just run. However, it requires you
-to [generate the gRPC modules](https://github.com/sparky8512/starlink-grpc-tools#generating-the-grpc-protocol-modules),
+looked like what I needed. I was hoping it would be able to be installed and just run. However, it requires you to 
+[generate the gRPC modules](https://github.com/sparky8512/starlink-grpc-tools#generating-the-grpc-protocol-modules),
 which sent me back to lots of compiling on the RaspberryPi. That was fine, but I wondered whether I could make it
 easier for anyone else.
 
@@ -43,13 +43,20 @@ I also bought a [Pimoroni Unicorn HAT Mini](https://www.adafruit.com/product/463
 script to have the Unicorn HAT show me a graph of recent usage. Not quite ready for prime time, but it's fun.
 That was the real reason I went down this path.
 
+## Caveats
+
+- I don't know python at all.
+- I'm not sure why the gRPC protocol modules aren't published, so if I find out I'm infringing on something I will
+remove this repo.
+- I expect at some point the gRPC protocol modules will be out of date due to software changes from Starlink.
+
 ## Credit / Related Projects
 
 Hat tip to the work on [starlink-grpc-tools](https://github.com/sparky8512/starlink-grpc-tools). Everything I
 have that is working was basically learned from reviewing that repo.
 
-I like the work on [ChuckTSI/BetterThanNothingWebInterface](https://github.com/ChuckTSI/BetterThanNothingWebInterface).
+I like the work on 
+[ChuckTSI/BetterThanNothingWebInterface](https://github.com/ChuckTSI/BetterThanNothingWebInterface).
 I thought I was going that direction (since I know PHP well), but getting it onto a RaspberryPi led to a dead
 end of not being able to generate the Starlink API protocol modules for PHP. If anyone has a solution for that,
 I would gladly make a PHP equivalent of this repository.
-
